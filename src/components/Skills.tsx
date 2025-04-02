@@ -2,32 +2,51 @@
 import { motion } from "framer-motion";
 import { FileCode, GitBranch, MousePointerClick, PenTool, Server } from "lucide-react";
 
-// Define skills categories
+// Define skills categories with their skills and logos
 const skillCategories = [
   {
     name: "Frontend Development",
     icon: <FileCode size={24} />,
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "React Native"],
+    skills: [
+      { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    ],
   },
   {
     name: "Backend Development",
     icon: <Server size={24} />,
-    skills: ["Node.Js", "Express"],
+    skills: [
+      { name: "Node.Js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+    ],
   },
   {
     name: "Tools & Version Control",
     icon: <GitBranch size={24} />,
-    skills: ["Git", "GitHub"],
+    skills: [
+      { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+      { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    ],
   },
   {
     name: "Design & Prototyping",
     icon: <PenTool size={24} />,
-    skills: ["Figma"],
+    skills: [
+      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+    ],
   },
   {
     name: "Professional Skills",
     icon: <MousePointerClick size={24} />,
-    skills: ["Problem Solving", "Team Collaboration", "Agile Development"],
+    skills: [
+      { name: "Problem Solving", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
+      { name: "Team Collaboration", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
+      { name: "Agile Development", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
+    ],
   },
 ];
 
@@ -46,7 +65,7 @@ const Skills = () => {
             My <span className="text-gradient">Skills</span>
           </h2>
           <p className="text-foreground/70 max-w-3xl mx-auto">
-            A comprehensive list of my technical skills and competencies.
+            A comprehensive showcase of my technical skills and competencies.
           </p>
         </motion.div>
 
@@ -64,7 +83,7 @@ const SkillCard = ({ category, index }: {
   category: {
     name: string;
     icon: React.ReactNode;
-    skills: string[];
+    skills: { name: string; logo: string }[];
   };
   index: number;
 }) => {
@@ -83,12 +102,11 @@ const SkillCard = ({ category, index }: {
         <h3 className="text-lg font-semibold">{category.name}</h3>
       </div>
       
-      <div className="space-y-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
         {category.skills.map((skill, skillIndex) => (
-          <SkillBar 
+          <SkillLogo 
             key={skillIndex} 
             skill={skill} 
-            value={85 + Math.random() * 15} 
             delay={skillIndex * 0.1}
           />
         ))}
@@ -97,23 +115,28 @@ const SkillCard = ({ category, index }: {
   );
 };
 
-const SkillBar = ({ skill, value, delay }: { skill: string; value: number; delay: number }) => {
+const SkillLogo = ({ skill, delay }: { 
+  skill: { name: string; logo: string }; 
+  delay: number 
+}) => {
   return (
-    <div>
-      <div className="flex justify-between mb-1">
-        <p className="text-sm font-medium text-foreground/80">{skill}</p>
-        <p className="text-xs text-foreground/60">{Math.round(value)}%</p>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      whileHover={{ scale: 1.1 }}
+      className="flex flex-col items-center justify-center p-3"
+    >
+      <div className="bg-white/5 p-3 rounded-xl mb-2 w-14 h-14 flex items-center justify-center">
+        <img 
+          src={skill.logo} 
+          alt={`${skill.name} logo`} 
+          className="w-10 h-10 object-contain" 
+        />
       </div>
-      <div className="w-full h-2 bg-secondary/50 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${value}%` }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay }}
-          className="h-full bg-gradient-to-r from-accent to-primary rounded-full"
-        ></motion.div>
-      </div>
-    </div>
+      <p className="text-xs text-center font-medium text-foreground/80">{skill.name}</p>
+    </motion.div>
   );
 };
 
