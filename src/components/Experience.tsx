@@ -4,6 +4,28 @@ import { Briefcase, Calendar, CheckCircle2 } from "lucide-react";
 
 const experiences = [
   {
+    company: "Cavista",
+    position: "Full-Stack Engineer",
+    period: "August 2024 - Present",
+    location: "Lagos State, Nigeria",
+    description: [
+      "Resolved frontend and backend bugs within the palliative care solution, enhancing system stability and user experience.",
+      "Implemented minor enhancements to existing features, improving usability and aligning with user feedback.",
+      "Collaborated with cross-functional teams for seamless integration between AureliaJS frontend and C# backend services.",
+    ],
+  },
+  {
+    company: "Axxess",
+    position: "Full Stack Engineer",
+    period: "August 2024 - Present",
+    location: "United States",
+    description: [
+      "Resolved frontend and backend bugs within the palliative care solution, enhancing system stability and user experience.",
+      "Implemented minor enhancements to existing features, improving usability and aligning with user feedback.",
+      "Collaborated with cross-functional teams for seamless integration between AureliaJS frontend and C# backend services.",
+    ],
+  },
+  {
     company: "Aufera",
     position: "Front End Engineer",
     period: "January 2023 - Present",
