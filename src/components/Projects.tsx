@@ -86,8 +86,18 @@ const ProjectCard = ({ project, index }: {
       className="glass-card rounded-xl overflow-hidden group tech-glow h-full flex flex-col"
     >
       <div className="relative h-56 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
-        <img 
+        <motion.div 
+          initial={{ scale: 1.2, opacity: 0.8 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"
+        ></motion.div>
+        <motion.img 
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
           src={project.image} 
           alt={project.title} 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -100,12 +110,16 @@ const ProjectCard = ({ project, index }: {
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech, idx) => (
-            <span 
-              key={idx} 
+            <motion.span 
+              key={idx}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
               className="px-2 py-1 text-xs rounded-md bg-accent/10 text-accent/90"
             >
               {tech}
-            </span>
+            </motion.span>
           ))}
         </div>
         
