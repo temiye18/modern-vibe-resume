@@ -63,7 +63,7 @@ const About = () => {
               Front-End Engineer with a passion for creating innovative solutions
             </h3>
             <p className="text-foreground/80">
-              I am a result-oriented software engineer with more than four years of experience revitalizing companies' programming and software development lifecycle. With a proven track record of proficiency in front-end development, modern client-side frameworks and advanced programming languages.
+              Driven by a passion for pixel-perfect design and seamless user experiences, I'm a front-end engineer who thrives on transforming complex requirements into fast, accessible, and beautifully crafted interfaces. Over the past 4 years, I've honed my HTML, CSS, JavaScript, and TypeScript expertise. I leverage modern frameworks - especially React and Next.js - to deliver performant, intuitive applications that delight users and drive business impact. I bring a keen eye for detail and a solutions-oriented mindset, taking pride in writing clean, maintainable code and embracing best practices like component-driven development, responsive design, and unit testing.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
