@@ -5,7 +5,7 @@ import {
   Database, 
   FileCode, 
   Figma as FigmaIcon, 
-  Git, 
+  GitBranch, 
   Github, 
   MousePointerClick, 
   Server 
@@ -44,7 +44,7 @@ const skillCategories = [
   },
   {
     name: "Tools & Methodologies",
-    icon: <Git size={24} />,
+    icon: <GitBranch size={24} />,
     skills: [
       { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
