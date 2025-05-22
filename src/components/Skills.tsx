@@ -1,6 +1,15 @@
 
 import { motion } from "framer-motion";
-import { FileCode, GitBranch, MousePointerClick, PenTool, Server } from "lucide-react";
+import { 
+  Code, 
+  Database, 
+  FileCode, 
+  Figma as FigmaIcon, 
+  Git, 
+  Github, 
+  MousePointerClick, 
+  Server 
+} from "lucide-react";
 
 // Define skills categories with their skills and logos
 const skillCategories = [
@@ -13,39 +22,35 @@ const skillCategories = [
       { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
       { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Aurelia.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "Astro", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" }
     ],
   },
   {
     name: "Backend Development",
     icon: <Server size={24} />,
     skills: [
-      { name: "Node.Js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
     ],
   },
   {
-    name: "Tools & Version Control",
-    icon: <GitBranch size={24} />,
+    name: "Database",
+    icon: <Database size={24} />,
+    skills: [
+      { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    ],
+  },
+  {
+    name: "Tools & Methodologies",
+    icon: <Git size={24} />,
     skills: [
       { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-    ],
-  },
-  {
-    name: "Design & Prototyping",
-    icon: <PenTool size={24} />,
-    skills: [
       { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-    ],
-  },
-  {
-    name: "Professional Skills",
-    icon: <MousePointerClick size={24} />,
-    skills: [
-      { name: "Problem Solving", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
-      { name: "Team Collaboration", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
-      { name: "Agile Development", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
+      { name: "Scrum", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
+      { name: "Agile", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" },
     ],
   },
 ];
@@ -69,7 +74,7 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <SkillCard key={index} category={category} index={index} />
           ))}
