@@ -4,6 +4,14 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "FoodCS",
+    description: "FoodCS combines AI-driven matching with human expertise to create groundbreaking solutions in food product development. Our platform bridges the gap between creativity and industry needs, driving innovation while fostering meaningful professional connections.",
+    image: "/lovable-uploads/5765d830-d3f0-4a06-a093-12e077325dab.png",
+    technologies: ["AI", "React", "TypeScript", "Machine Learning", "Product Development"],
+    github: "https://github.com",
+    liveLink: "https://www.foodcs.co.uk/",
+  },
+  {
     title: "ShareSafe",
     description: "A comprehensive social media application with geofencing technology and real-time location services for emergency notifications, enhancing user safety.",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
