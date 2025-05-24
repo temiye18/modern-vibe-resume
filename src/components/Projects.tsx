@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -30,10 +29,10 @@ const projects = [
   {
     title: "Transportation Queue",
     description: "An app to manage transportation queue for a logistic company, incorporating customer list, planner and drag-and-drop functionality to streamline delivery processes.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "/lovable-uploads/07158d4a-48e3-4581-8108-d356fd0fb263.png",
     technologies: ["JavaScript", "React", "MongoDB", "NodeJS"],
     github: "https://github.com",
-    liveLink: "#",
+    liveLink: "https://transportation-queue-frontend.vercel.app/",
   },
   {
     title: "Diagmentia",
