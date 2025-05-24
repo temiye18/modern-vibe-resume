@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -7,7 +8,7 @@ const projects = [
     description: "FoodCS combines AI-driven matching with human expertise to create groundbreaking solutions in food product development. Our platform bridges the gap between creativity and industry needs, driving innovation while fostering meaningful professional connections.",
     image: "/lovable-uploads/5765d830-d3f0-4a06-a093-12e077325dab.png",
     technologies: ["AI", "React", "TypeScript", "Machine Learning", "Product Development"],
-    github: "https://github.com",
+    github: "https://github.com/temiye18/food-cs",
     liveLink: "https://www.foodcs.co.uk/",
   },
   {
@@ -15,7 +16,7 @@ const projects = [
     description: "A comprehensive social media application with geofencing technology and real-time location services for emergency notifications, enhancing user safety.",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     technologies: ["React Native", "NodeJS", "TypeScript", "MongoDB", "Webhook", "Web-socket"],
-    github: "https://github.com",
+    github: "https://github.com/G2-FINAL-YEAR-PROJECT/ShareSafe",
     liveLink: "#",
   },
   {
@@ -23,7 +24,7 @@ const projects = [
     description: "A live chart to track multiple financial markets including trades, quotes, aggregates, reference data, and news with instant access to real-time and historical stock markets.",
     image: "/lovable-uploads/0087f97c-c960-4d53-ac78-6bead44d833d.png",
     technologies: ["Trading Widgets API", "React.js", "TypeScript", "React Router", "Context-API", "Styled Components"],
-    github: "https://github.com",
+    github: "https://github.com/temiye18/chart-reel",
     liveLink: "https://chart-reel.vercel.app/",
   },
   {
@@ -31,7 +32,7 @@ const projects = [
     description: "An app to manage transportation queue for a logistic company, incorporating customer list, planner and drag-and-drop functionality to streamline delivery processes.",
     image: "/lovable-uploads/07158d4a-48e3-4581-8108-d356fd0fb263.png",
     technologies: ["JavaScript", "React", "MongoDB", "NodeJS"],
-    github: "https://github.com",
+    github: "https://github.com/temiye18/transportation-queue-frontend",
     liveLink: "https://transportation-queue-frontend.vercel.app/",
   },
   {
@@ -39,7 +40,7 @@ const projects = [
     description: "An expert system for dementia diagnosis using production rules, inference engines, heuristics and a robust knowledge base of patient CDR and MMSE scores.",
     image: "/lovable-uploads/f1e8f373-1fe5-4092-b963-c437bad5dbae.png",
     technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask"],
-    github: "https://github.com",
+    github: "https://github.com/temiye18/diagmentia",
     liveLink: "https://diagmentia.vercel.app/",
   },
 ];
