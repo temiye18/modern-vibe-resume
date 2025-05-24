@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -22,10 +21,10 @@ const projects = [
   {
     title: "Chart Reel",
     description: "A live chart to track multiple financial markets including trades, quotes, aggregates, reference data, and news with instant access to real-time and historical stock markets.",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    image: "/lovable-uploads/0087f97c-c960-4d53-ac78-6bead44d833d.png",
     technologies: ["Trading Widgets API", "React.js", "TypeScript", "React Router", "Context-API", "Styled Components"],
     github: "https://github.com",
-    liveLink: "https://chartreelapp.com",
+    liveLink: "https://chart-reel.vercel.app/",
   },
   {
     title: "Transportation Queue",
