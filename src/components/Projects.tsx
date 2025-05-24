@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -37,10 +38,10 @@ const projects = [
   {
     title: "Diagmentia",
     description: "An expert system for dementia diagnosis using production rules, inference engines, heuristics and a robust knowledge base of patient CDR and MMSE scores.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "/lovable-uploads/f1e8f373-1fe5-4092-b963-c437bad5dbae.png",
     technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask"],
     github: "https://github.com",
-    liveLink: "https://diagmentia.org",
+    liveLink: "https://diagmentia.vercel.app/",
   },
 ];
 
