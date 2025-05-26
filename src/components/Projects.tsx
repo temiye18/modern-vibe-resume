@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -14,7 +13,7 @@ const projects = [
   {
     title: "ShareSafe",
     description: "A comprehensive social media application with geofencing technology and real-time location services for emergency notifications, enhancing user safety.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "/lovable-uploads/e73af1ff-f08c-41db-b3a7-461372fd3e32.png",
     technologies: ["React Native", "NodeJS", "TypeScript", "MongoDB", "Webhook", "Web-socket"],
     github: "https://github.com/G2-FINAL-YEAR-PROJECT/ShareSafe",
     liveLink: "#",

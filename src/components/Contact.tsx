@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
@@ -27,12 +26,21 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || "Contact from Portfolio");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:akinyemitemiye18@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     setTimeout(() => {
-      toast.success("Message sent successfully! I'll get back to you soon.");
+      toast.success("Email client opened! Please send your message from there.");
       setFormData({ name: "", email: "", subject: "", message: "" });
       setIsSubmitting(false);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -197,7 +205,7 @@ const Contact = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                       </svg>
-                      Sending...
+                      Opening Email...
                     </span>
                   ) : (
                     <span className="flex items-center">
